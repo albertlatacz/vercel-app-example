@@ -1,6 +1,5 @@
-function handler(req, res) {
-  const { name = 'World' } = req.query
-  return res.json({
-    message: `Hello ${name}!`,
-  })
+export default function handler(req, res) {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'application/json');
+  res.json({ name: 'John Doe' });
 }
